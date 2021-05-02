@@ -1,10 +1,10 @@
-# OctoPrint-TPLinkSmartplug
+# OctoPrint-tendasmartplug
 
 ***Warning***: Recent firmware version 1.1.0 for the HS100, HS110 have been reported to break the capability of this plugin to communicate with kasa devices. So far it seems to be only effecting UK version plugs, but could spread to other firmware variants. 
 
-***Warning***: Recent firmware updates for the HS103 breaks the use of this plugin with those devices. TP-Link may push the same firmware to other devices, but be warned that updating your devices firmware may break the use of this plugin. It appears this can be resolved by never connecting the plug to the cloud by following the steps outlined [here](https://www.tp-link.com/us/support/faq/2707/).
+***Warning***: Recent firmware updates for the HS103 breaks the use of this plugin with those devices. Tenda may push the same firmware to other devices, but be warned that updating your devices firmware may break the use of this plugin. It appears this can be resolved by never connecting the plug to the cloud by following the steps outlined [here](https://www.tendacn.com/fr/download/detail-3491.html).
 
-Work inspired by [OctoPrint-PSUControl](https://github.com/kantlivelong/OctoPrint-PSUControl) and [TP-Link WiFi SmartPlug Client](https://github.com/softScheck/tplink-smartplug), this plugin controls a TP-Link Smartplug via OctoPrint's nav bar. Currently known compatible models are the HS100, HS107, HS110, HS300, KP115. Other Kasa app based devices may work. Tapo series devices will not work with this plugin, and probably never will because of their closed communication.
+Forked from [OctoPrint-TPLinkSmartplug](https://github.com/jneilliii/OctoPrint-TPLinkSmartplug)
 
 ##  Screenshots
 ![screenshot](screenshot.png)
@@ -20,12 +20,12 @@ Work inspired by [OctoPrint-PSUControl](https://github.com/kantlivelong/OctoPrin
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    https://github.com/jneilliii/OctoPrint-TPLinkSmartplug/archive/master.zip
+    https://github.com/Neodbaryd/OctoPrint-TendaSP3-Smartplug/archive/master.zip
 
 
 ## Configuration
 
-Once installed go into settings and enter the ip address for your TP-Link Smartplug device. Adjust additional settings as needed.
+Once installed go into settings and enter the ip address for your Tenda Smartplug device. Adjust additional settings as needed.
 
 ## Settings Explained
 - **IP**
@@ -44,7 +44,7 @@ Once installed go into settings and enter the ip address for your TP-Link Smartp
   - Uses the plug's built in countdown timer rule to postpone the power on/off by configured delay in seconds.
 - **GCODE Trigger**
   - When checked this will enable the processing of M80 and M81 commands from gcode to power on/off plug.  Syntax for gcode command is M80/M81 followed by hostname/ip.  For example if your plug is 192.168.1.2 your gcode command would be **M80 192.168.1.2**
-  - Added with version 0.9.5 you can now use the custom gcode commands `@TPLINKON` and `@TPLINKOFF` followed by the IP address of the plug.  This option will only work for plugs with GCODE processing enabled.  For example if your plug is 192.168.1.2 your gcode command would be **@TPLINKON 192.168.1.2**
+  - Added with version 0.9.5 you can now use the custom gcode commands `@TENDAON` and `@TENDAOFF` followed by the IP address of the plug.  This option will only work for plugs with GCODE processing enabled.  For example if your plug is 192.168.1.2 your gcode command would be **@TENDAON 192.168.1.2**
 - **Auto Connect**
   - Automatically connect to printer after plug is powered on.
   - Will wait for number of seconds configured in **Auto Connect Delay** setting prior to attempting connection to printer.
@@ -58,37 +58,14 @@ Once installed go into settings and enter the ip address for your TP-Link Smartp
   
 ## Most recent changelog
 
-**[1.0.1](https://github.com/jneilliii/OctoPrint-TPLinkSmartplug/releases/tag/1.0.0)** (04/15/2021)
+**[1.0.1](https://github.com/Neodbaryd/OctoPrint-TendaSP3-Smartplug/releases/tag/1.0.0)** (04/15/2021)
 
 * fix issue introduced with last update that prevented adding new plugs.
 
-### [All releases](https://github.com/jneilliii/OctoPrint-TPLinkSmartplug/releases)
+### [All releases](https://github.com/Neodbaryd/OctoPrint-TendaSP3-Smartplug/releases)
 
 ## Get Help
 
 If you experience issues with this plugin or need assistance please use the issue tracker by clicking issues above.
 
-### Additional Plugins
-
-Check out my other plugins [here](https://plugins.octoprint.org/by_author/#jneilliii)
-
-### Sponsors
-- Andreas Lindermayr
-- [@Mearman](https://github.com/Mearman)
-- [@TxBillbr](https://github.com/TxBillbr)
-- Gerald Dachs
-- [@TheTuxKeeper](https://github.com/thetuxkeeper)
-- @tideline3d
-- [SimplyPrint](https://simplyprint.dk/)
-- [Andrew Beeman](https://github.com/Kiendeleo)
-- [Calanish](https://github.com/calanish)
-- [Will O](https://github.com/4wrxb)
-- [Stephen Berry](https://github.com/berrystephenw)
-
-### Support My Efforts
-I, jneilliii, programmed this plugin for fun and do my best effort to support those that have issues with it, please return the favor and leave me a tip or become a Patron if you find this plugin helpful and want me to continue future development.
-
-[![Patreon](patreon-with-text-new.png)](https://www.patreon.com/jneilliii) [![paypal](paypal-with-text.png)](https://paypal.me/jneilliii)
-
-<small>No paypal.me? Send funds via PayPal to jneilliii&#64;gmail&#46;com</small>
 

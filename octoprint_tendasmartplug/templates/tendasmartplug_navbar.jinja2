@@ -2,10 +2,10 @@
 <a class="pull-right" href="#" data-toggle="tooltip" data-html="true" data-bind="click: $root.toggleRelay, visible: $root.loginState.loggedIn(), tooltip: {title: label, placement: 'bottom'}" style="float: left;"><i class="icon" data-bind="css: [currentState(), icon(),(($root.processing().indexOf(ip()) > -1) ? 'icon-spin' : '')].join(' ')"></i><span data-bind="text: label"></span></a>
 <!-- /ko -->
 
-<div id="TPLinkSmartPlugWarning" data-bind="with: selectedPlug" class="modal hide fade">
+<div id="tendasmartplugWarning" data-bind="with: selectedPlug" class="modal hide fade">
     <div class="modal-header">
         <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
-        <h3>TP-Link Smartplug</h3>
+        <h3>Tenda Smartplug</h3>
     </div>
     <div class="modal-body">
         <p>
